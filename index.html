@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cool Page</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="animate.css">
+    <link rel="stylesheet" type="text/css" href="reset.min.css">
+  </head>
+
+<body>
+  <div id ="wrapper">
+<div id ="maincontainer">
+  <div id ="circle" class="animated fadeInUpBig">
+    <div class="insidecircle">About</div>
+  </div>
+  <div id="projecticircle" class=" animated fadeInUpBig">
+    <div class="insidecircle" id ="projects">Projects</div>
+  </div>
+  <div id ="maintext">
+  <h1>Hello, I'm Ykat</h1>
+
+  </div>
+
+<div id ="portfolio">
+<h1>My Portfolio</h1>
+
+</div>
+
+
+
+</div>
+</div>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+<script>
+$( document ).ready(function() {
+
+
+  portfolio = $("#portfolio")
+  maintext = $("#maintext")
+
+
+  $('#projects').click(function(){
+
+    $('#maincontainer').animate({width: 0}, { bottom: 0 }, {duration: 1000 });
+    maintext.css("display", "none")
+    portfolio.css("display", "block")
+    portfolio.addClass('animated fadeInUp')
+    $('#maincontainer').animate({width: "80%"}, { bottom: 0 }, {duration: 1000 });
+
+
+
+
+})
+
+
+
+});
+</script>
+
+
+</body>
+</html>
